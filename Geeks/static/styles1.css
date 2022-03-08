@@ -6,7 +6,7 @@
   font-family: 'Poppins',sans-serif;
 }
 body{
-  /* height: 100vh; */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,10 +14,9 @@ body{
   background: linear-gradient(135deg, #005e08, #5ee07f);
 }
 .imge{
-    position: absolute;
-    height: 85px;
-    top: 40px;
-    right: 330px;
+  float: right;
+  height: 85px;
+    
 }
 .note{
     font-size: 13px;
@@ -51,6 +50,7 @@ border-radius: 5px;
 
 
 .container{
+  
   max-width: 700px;
   width: 100%;
   background-color: #fff;
@@ -94,14 +94,19 @@ input::-webkit-input-placeholder {
 
 @media only screen and (max-width: 380px){
     .imge.phon{
-        display: none !important;
+        /* display: none !important; */
     }
     .img1{
-        display: none !important;
+        /* display: none !important; */
     }
 }
 
 @media only screen and (max-width: 450px) {
+  .imge{
+    position: absolute;
+    top: 40px;
+    right: 330px;
+  }
     .imge.phon{
         height: 60px;
         top: 28px;
@@ -121,7 +126,7 @@ input::-webkit-input-placeholder {
     }
     .img3{
         
-        right: 110px;
+        left: 230px;
     }
     .img4{
         
@@ -131,6 +136,25 @@ input::-webkit-input-placeholder {
     .container .title{
         font-size: 24px;
       }
+}
+.form-control-select{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+select{
+  color: #afafaf;
+}
+
+option{
+  color: black;
+  font-size: 14px;
 }
 
 

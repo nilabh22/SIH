@@ -46,7 +46,7 @@ class student(forms.ModelForm):
     rollno5=forms.IntegerField(widget=forms.NumberInput(attrs=
             {'class':'form-control','placeholder':'Enter your Roll Number'}),
             required=False)
-    department=forms.ModelChoiceField(queryset=Department.objects.all())
+    department=forms.ModelChoiceField(queryset=Department.objects.all(),widget=forms.Select(attrs={'class':'form-control-select','placeholder':'Select your Department'}))
     gitLinkedinLink=forms.URLField(widget=forms.URLInput(attrs=
             {'class':'form-control','placeholder':'Enter your Github Link'}),
                 required=True,max_length=10000)
@@ -69,7 +69,8 @@ class IndividualForm(forms.ModelForm):
     contact=forms.IntegerField(widget=forms.NumberInput(attrs=
             {'class':'form-control','placeholder':'Enter your number'}),
                     required=True)
-    department=forms.ModelChoiceField(queryset=Department.objects.all())
+    department=forms.ModelChoiceField(queryset=Department.objects.all(),widget=forms.Select(attrs=
+            {'class':'form-control-select','placeholder':'Select your Department'}))
     gitLinkedinLink=forms.URLField(widget=forms.URLInput(attrs=
             {'class':'form-control','placeholder':'Enter your Github Link'}),
                 required=True,max_length=10000)
